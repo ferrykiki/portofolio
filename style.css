@@ -294,38 +294,6 @@ ul {
     font-size: 12px;
     font-weight: bold;
 }
-
-/* === Bagian Hak Cipta — Menempel ke Bawah === */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.skills-section {
-    flex: 1; /* Mendorong footer ke bawah */
-}
-
-.footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: #f8fafc;
-    color: #64748b;
-    font-size: 14px;
-    margin-top: auto; /* Selalu di bawah */
-}
-/* Paksa setiap kartu berdiri sendiri & sama lebar */
-.skill-card {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-}
-
-
 /* === KARYA === */
 
 .grid-karya {
@@ -680,6 +648,48 @@ footer {
     margin-top: auto;
     color: var(--abu-teks);
     font-size: 0.95rem;
+}
+/* === DASAR: Berlaku untuk SEMUA HALAMAN === */
+html, body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pastikan tinggi minimal layar penuh */
+}
+
+/* KUNCI UTAMA: Semua konten utama akan MENGISI RUANG KOSONG */
+main,
+.beranda-section,
+.tentang-section,
+.skills-section,
+.proyek-section,
+.kontak-section {
+  flex: 1; /*  Ini yang mendorong footer ke bawah */
+  box-sizing: border-box;
+}
+
+/* === FOOTER: SATU ATURAN SAJA === */
+footer,
+.footer {
+  background: var(--abu-terang, #f8fafc);
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; 
+  color: var(--abu-teks, #64748b);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* === Kartu Keahlian === */
+.skill-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
 }
 
 /* === RESPONSIF === */
