@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Portofolio — Ferry Illham Setiawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">FerryKiki</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Saya</a></li>
+                <li><a href="keahlian.html">Keahlian</a></li>
+                <li><a href="karya.html" class="aktif">Karya</a></li>
+                <li><a href="pengalaman.html">Pengalaman</a></li>
+                <li><a href="organisasi.html">Organisasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            <div class="tombol-menu" id="tombolMenu">☰</div>
+        </div>
+    </nav>
+
+    <section class="halaman">
+        <h2 class="judul-bagian">Karya Portofolio</h2>
+        <p class="deskripsi-bagian">Beberapa proyek website yang telah saya kerjakan untuk mengisi portofolio saya</p>
+        <div class="grid-karya">
+            <div class="gambar-tampil" id="kotakGambar" style="display: none;">
+                <span class="tutup" onclick="tutupGambar()">&times;</span>
+                <img id="gambarProyek" src="" alt="Screenshot Proyek">
+                </div>
+            <div class="kartu-karya">
+                <div class="portfolio-card" onclick="tampilkanGambar('foto-karya/portofolio.png')">
+                <h3>Portofolio Pribadi</h3>
+                <p>Website pribadi yang menampilkan profil, pendidikan, keterampilan, pengalaman,
+                    serta project yang telah dibuat sebagai media untuk memperkenalkan kemampuan dan hasil karya.</p>
+                <span class="tag">HTML, CSS</span>
+                </div>
+            </div>
+            <div class="kartu-karya">
+                <div class="portfolio-card" onclick="tampilkanGambar('foto-karya/keuangan.png')">
+                <h3>Sistem Pengatur Keuangan    </h3>
+                <p>Website untuk membantu pengguna mencatat, mengelola,
+                    dan memantau pemasukan serta pengeluaran secara terstruktur sehingga kondisi keuangan dapat lebih mudah dipantau.</p>
+                <span class="tag">HTML, CSS, JS</span>
+            </div>
+            </div>
+            <div class="kartu-karya">
+                <div class="portfolio-card" onclick="tampilkanGambar('foto-karya/admin.png')">
+                <h3>Sistem Manajemen Karyawan</h3>
+                <p>Sistem berbasis website untuk mengelola data karyawan, seperti informasi karyawan,
+                    jabatan, departemen, serta data terkait administrasi karyawan secara terorganisir.</p>
+                <span class="tag">HTML, CSS</span>
+            </div>
+            </div>
+            <div class="kartu-karya">
+                <div class="portfolio-card" onclick="tampilkanGambar('foto-karya/inventory_barang.png')">
+                <h3>Sistem Inventory Barang</h3>
+                <p>Sistem untuk mengelola dan memantau data persediaan barang,
+                    termasuk pencatatan barang masuk, barang keluar, stok, dan informasi barang secara terstruktur.</p>
+                <span class="tag">HTML, CSS</span>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ferry Illham Setiawan — Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
