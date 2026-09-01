@@ -171,6 +171,10 @@ ul {
     border: 5px solid var(--biru-langit);
     box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3);
     transition: transform 0.3s ease;
+    margin: 2rem auto;
+
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .foto-profil:hover {
@@ -756,6 +760,27 @@ footer {
         width: 180px;
         height: 180px;
     }
+}
+/* Tombol agar rapi di HP */
+button {
+  display: block;
+  width: 260px;
+  margin: 0.8rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-utama {
+  background-color: #4299e1;
+  color: white;
+}
+
+.btn-kedua {
+  border: 2px solid #4299e1;
+  color: #4299e1;
+  background: white;
 }
 
 /* Sesuaikan ukuran di HP */
