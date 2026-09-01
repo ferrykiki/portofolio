@@ -663,11 +663,13 @@ body {
 }
 
 /* KUNCI UTAMA: Semua konten utama akan MENGISI RUANG KOSONG */
+.beranda,
 main,
-.beranda-section,
 .tentang-section,
 .skills-section,
 .proyek-section,
+.pengalaman-section,
+.organisasi-section,
 .kontak-section {
   flex: 1; /*  Ini yang mendorong footer ke bawah */
   box-sizing: border-box;
