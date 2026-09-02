@@ -90,38 +90,59 @@ ul {
     grid-template-columns: 1fr 400px;
     gap: 2.5rem;
     align-items: center;
-    min-height: 80vh;
 }
 
+/* KHUSUS TAMPILAN HP */
+@media (max-width: 900px) {
+  .beranda {
+    display: flex;       
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .foto-profil {
+    width: 240px !important;
+    height: 240px !important;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 2rem;
+  }
+
+  .lingkaran {
+    width: 240px;
+    height: 240px;
+  }
+
+  .tombol-grup {
+    justify-content: center;
+  }
+}
 .beranda-kotak h1 {
     font-size: 2.4rem;
     margin-bottom: 1rem;
     color: var(--hitam-lembut);
 }
-
 .beranda-kotak span {
     color: var(--biru-langit);
 }
-
 .sub-judul {
     font-size: 1.2rem;
     color: var(--biru-langit);
     margin-bottom: 1.2rem;
     font-weight: 500;
 }
-
 .beranda-kotak p {
     color: var(--abu-teks);
     margin-bottom: 1.8rem;
     font-size: 1.05rem;
 }
-
 .tombol-grup {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 .tombol {
     padding: 0.75rem 1.8rem;
     border-radius: 6px;
@@ -129,32 +150,26 @@ ul {
     transition: all 0.3s;
     display: inline-block;
 }
-
 .tombol.utama {
     background: var(--biru-langit);
     color: var(--putih);
 }
-
 .tombol.utama:hover {
     background: #1E88E5;
     transform: translateY(-2px);
 }
-
 .tombol.sekunder {
     background: var(--putih);
     color: var(--biru-langit);
     border: 2px solid var(--biru-langit);
 }
-
 .tombol.sekunder:hover {
     background: var(--biru-terang);
 }
-
 .beranda-gambar {
     display: flex;
     justify-content: center;
 }
-
 .lingkaran {
     width: 280px;
     height: 280px;
@@ -164,23 +179,17 @@ ul {
 }
 /* === FOTO PROFIL === */
 .foto-profil {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%; /* Membuat bentuk lingkaran */
-    object-fit: cover; /* Memastikan foto tidak terlihat gepeng */
+    width: 380px;    
+    height: 380px;   
+    border-radius: 50%;
+    object-fit: cover;
     border: 5px solid var(--biru-langit);
-    box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3);
+    box-shadow: 0 4px 15px rgba(66, 165, 245, 245, 0.3);
     transition: transform 0.3s ease;
-    margin: 2rem auto;
-
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
 }
-
 .foto-profil:hover {
-    transform: scale(1.25); /* Efek sedikit membesar saat disentuh */
+    transform: scale(1.05);
 }
-
 /* === HALAMAN UMUM === */
 .halaman {
     max-width: 1100px;
@@ -239,20 +248,20 @@ ul {
 
 .skills-container {
     display: grid !important;
-    grid-template-columns: 1fr !important; /* ← UBAH INI: 1 kolom saja = ke bawah */
+    grid-template-columns: 1fr !important; 
     gap: 25px !important;
-    max-width: 700px !important; /* ← Lebar kartu diperkecil agar rapi */
+    max-width: 700px !important;
     width: 90% !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
 }
 
 .skill-card {
-    background-color: #f5f5f5 !important; /* Warna abu-abu muda */
-    padding: 20px !important; /* Jarak isi dari pinggir kotak */
-    border-radius: 12px !important; /* Sudut kotak melengkung */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Bayangan lembut */
-    margin-bottom: 20px !important; /* Jarak antar kartu */
+    background-color: #f5f5f5 !important; 
+    padding: 20px !important; 
+    border-radius: 12px !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; 
+    margin-bottom: 20px !important; 
 }
 
 .skill-card h3 {
@@ -269,7 +278,7 @@ ul {
 
 /* Wrapper Bar */
 .progress-bar-wrap {
-    height: 24px; /* Diperbesar agar muat tulisan persen */
+    height: 24px; 
     background-color: #e2e8f0;
     border-radius: 12px;
     overflow: hidden;
@@ -283,7 +292,7 @@ ul {
     border-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Tulisan ada di ujung kanan bar */
+    justify-content: flex-end; 
     padding-right: 8px;
     transition: width 1.2s ease-out;
 }
@@ -366,12 +375,12 @@ ul {
     border-left: 4px solid #3b82f6;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     text-align: left;
-    cursor: pointer; /* ← Tangan saat melayang = bisa diklik */
+    cursor: pointer; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
-    transform: translateY(-5px); /* Efek naik sedikit saat disentuh */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
 }
 
@@ -659,7 +668,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Pastikan tinggi minimal layar penuh */
+  min-height: 100vh; 
 }
 
 /* KUNCI UTAMA: Semua konten utama akan MENGISI RUANG KOSONG */
@@ -671,11 +680,11 @@ main,
 .pengalaman-section,
 .organisasi-section,
 .kontak-section {
-  flex: 1; /*  Ini yang mendorong footer ke bawah */
+  flex: 1; 
   box-sizing: border-box;
 }
 
-/* === FOOTER: SATU ATURAN SAJA === */
+
 footer,
 .footer {
   background: var(--abu-terang, #f8fafc);
@@ -723,9 +732,9 @@ footer,
 
 .foto-kontak img {
     width: 380px;
-    height: 380px; /* ← Tinggi sama dengan Lebar = Bentuk Kotak Sempurna */
-    object-fit: cover; /* ← Memotong foto agar pas, tidak melar */
-    border-radius: 50%; /* ← Membulatkan jadi Lingkaran Sempurna */
+    height: 380px; 
+    object-fit: cover; 
+    border-radius: 50%; 
     border: 4px solid var(--biru-langit);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
